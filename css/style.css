@@ -14709,8 +14709,8 @@ html.rd-navbar-fixed-linked .page-header {
 }
 
 .rd-navbar-classic.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main, .rd-navbar-classic.rd-navbar-static.rd-navbar--is-clone .rd-navbar-main {
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     background: #1b1929;
     text-emphasis-color:#ffffff;
 }
