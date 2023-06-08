@@ -1,5 +1,6 @@
 <?php
 // Datos de conexión a la base de datos PostgreSQL
+
 $host = 'mail.tecnoweb.org.bo';
 $port = '5432';
 $dbname = 'db_grupo09sa';
