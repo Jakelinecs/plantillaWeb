@@ -26,10 +26,13 @@ if (!$conn) {
 
 // Crear la consulta SQL para insertar los datos en la tabla
 //INSERT INTO public.cotacto( id, nombre, email, telefono, mensaje) VALUES (?, ?, ?, ?, ?);
-$sql = "INSERT INTO cotacto ( nombre, email, telefono, mensaje ) VALUES ($nombre, $correo, $cel, $sms)";
+$sql = "INSERT INTO cotacto (nombre, email, telefono, mensaje) VALUES ($1, $2, $3, $4)";
 
-// Ejecutar la consulta
-$result = pg_query($conn, $sql);
+// Preparar la consulta
+$stmt = pg_prepare($conn, "insert_query", $sql);
+
+// Ejecutar la consulta con los valores proporcionados
+$result = pg_execute($conn, "insert_query", array($nombre, $correo, $cel, $sms));
 
 if ($result) {
     echo "Datos insertados correctamente";
