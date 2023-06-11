@@ -26,7 +26,7 @@ if (!$conn) {
 
 // Crear la consulta SQL para insertar los datos en la tabla
 //INSERT INTO public.cotacto( id, nombre, email, telefono, mensaje) VALUES (?, ?, ?, ?, ?);
-$sql = "INSERT INTO cotacto ( nombre, email, telefono, mensaje ) VALUES ('$nombre', '$correo', '$cel', '$sms')";
+$sql = "INSERT INTO cotacto ( nombre, email, telefono, mensaje ) VALUES ($nombre, $correo, $cel, $sms)";
 
 // Ejecutar la consulta
 $result = pg_query($conn, $sql);
